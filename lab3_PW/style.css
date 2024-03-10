@@ -207,11 +207,20 @@ footer {
     right: 20px; /* Adjust this value to change the distance from the left */
     z-index: 999; /* Ensure the image stays above other content */
     opacity: 0; /* Hide the image initially */
-    animation: fadeIn 5s ease forwards; /* Use CSS animation to fade in */
-    animation-delay: 5s;
+    animation: fadeIn 5s ease forwards, jump 1s 500 alternate forwards; /* Use CSS animation to fade in */
+    animation-delay: 1s;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
