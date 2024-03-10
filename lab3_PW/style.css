@@ -128,7 +128,11 @@ footer {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     header {
-        padding: 40px;
+        padding: 60px;
+    }
+	
+    header h1 {
+	font-size: 36px;
     }
 
     nav ul li {
@@ -167,4 +171,32 @@ footer {
     }
 }
 
+#products-section {
+    margin-top: 40px;
+}
 
+#products-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#product-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#product-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.mobile-only-section {
+    display: none; /* Hide the section by default */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+    .mobile-only-section {
+        display: block; /* Show the section on mobile devices */
+    }
+}
